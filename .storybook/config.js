@@ -1,9 +1,4 @@
 import { configure } from '@storybook/react';
 
-const req = require.context('../src/components', true, /.+stories\.jsx?$/);
-
-const loadStories = () => {
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
+// automatically import all files ending in *.stories.js in `src/components`
+configure(require.context('../src/components', true, /.+stories\.jsx?$/), module);
