@@ -4,22 +4,33 @@ import {
   CardHeader,
   IconButton
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
+
+const useStyles = makeStyles({
+  root: {
+    background: "linear-gradient(45deg, gray 30%, white 90%)"
+  }
+});
 
 interface Props {
   title: string;
   onClick: any;
 }
 
-export const Card: React.FC<Props> = ({ title, onClick }) => (
-  <CardComponent>
-    <CardHeader
-      action={
-        <IconButton aria-label="delete" onClick={onClick}>
-          <DeleteIcon />
-        </IconButton>
-      }
-      title={title}
-    />
-  </CardComponent>
-);
+export const Card: React.FC<Props> = ({ title, onClick }) => {
+  const classes = useStyles();
+
+  return (
+    <CardComponent className={classes.root}>
+      <CardHeader
+        action={
+          <IconButton aria-label="delete" onClick={onClick}>
+            <DeleteIcon />
+          </IconButton>
+        }
+        title={title}
+      />
+    </CardComponent>
+  );
+};
