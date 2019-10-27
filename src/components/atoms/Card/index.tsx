@@ -11,7 +11,7 @@ interface Props {
   onClick: any;
 }
 
-export const Card = ({ title, onClick }: Props) => (
+export const Card: React.FC<Props> = ({ title, onClick }) => (
   <CardComponent>
     <CardHeader
       action={
