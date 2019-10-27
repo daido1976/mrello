@@ -10,7 +10,8 @@ import DeleteIcon from "@material-ui/icons/Delete";
 const useStyles = makeStyles({
   root: {
     "&:hover": {
-      backgroundColor: "whitesmoke"
+      backgroundColor: "whitesmoke",
+      cursor: "pointer"
     }
   }
 });
