@@ -9,7 +9,9 @@ import DeleteIcon from "@material-ui/icons/Delete";
 
 const useStyles = makeStyles({
   root: {
-    background: "linear-gradient(45deg, gray 30%, white 90%)"
+    "&:hover": {
+      backgroundColor: "whitesmoke"
+    }
   }
 });
 
