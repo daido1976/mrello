@@ -3,6 +3,6 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Card } from ".";
 
-storiesOf("Atoms/Card", module).add("default", () => (
+storiesOf("Card", module).add("default", () => (
   <Card title="Hello World!" onClick={action("deleted")}></Card>
 ));
